@@ -1,0 +1,9 @@
+C:\Users\Dell\Desktop\例程\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\WindowsFormsApplication5.exe.config
+C:\Users\Dell\Desktop\例程\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\WindowsFormsApplication5.exe
+C:\Users\Dell\Desktop\例程\WindowsFormsApplication5\WindowsFormsApplication5\bin\Debug\WindowsFormsApplication5.pdb
+C:\Users\Dell\Desktop\例程\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\TypeOf.csprojResolveAssemblyReference.cache
+C:\Users\Dell\Desktop\例程\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.Frm_Main.resources
+C:\Users\Dell\Desktop\例程\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.Properties.Resources.resources
+C:\Users\Dell\Desktop\例程\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\TypeOf.csproj.GenerateResource.Cache
+C:\Users\Dell\Desktop\例程\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.exe
+C:\Users\Dell\Desktop\例程\WindowsFormsApplication5\WindowsFormsApplication5\obj\Debug\WindowsFormsApplication5.pdb
