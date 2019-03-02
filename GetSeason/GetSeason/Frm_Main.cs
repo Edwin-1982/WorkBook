@@ -42,7 +42,7 @@ namespace GetSeason
                 case 2:
                     MessageBox.Show("冬季", "提示！");
                     break;
-                default://如果没有选择月份弹出提示信息
+                default:                                                //如果没有选择月份弹出提示信息
                     MessageBox.Show("请选择月份","提示！");
                     break;
             }
