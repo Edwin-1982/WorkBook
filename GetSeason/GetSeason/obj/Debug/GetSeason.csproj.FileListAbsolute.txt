@@ -37,6 +37,7 @@ E:\我的资料\C#光盘资料\C#开发实例大全(基础卷)\MR\02\029\GetSeas
 E:\我的资料\C#光盘资料\C#开发实例大全(基础卷)\MR\02\029\GetSeason\GetSeason\obj\Debug\GetSeason.csproj.GenerateResource.Cache
 E:\我的资料\C#光盘资料\C#开发实例大全(基础卷)\MR\02\029\GetSeason\GetSeason\obj\Debug\GetSeason.exe
 E:\我的资料\C#光盘资料\C#开发实例大全(基础卷)\MR\02\029\GetSeason\GetSeason\obj\Debug\GetSeason.pdb
+<<<<<<< HEAD
 E:\迅雷下载\Git版本库\例程\GetSeason\GetSeason\bin\Debug\GetSeason.exe
 E:\迅雷下载\Git版本库\例程\GetSeason\GetSeason\bin\Debug\GetSeason.pdb
 E:\迅雷下载\Git版本库\例程\GetSeason\GetSeason\obj\Debug\GetSeason.csprojResolveAssemblyReference.cache
@@ -45,3 +46,5 @@ E:\迅雷下载\Git版本库\例程\GetSeason\GetSeason\obj\Debug\GetSeason.Prop
 E:\迅雷下载\Git版本库\例程\GetSeason\GetSeason\obj\Debug\GetSeason.csproj.GenerateResource.Cache
 E:\迅雷下载\Git版本库\例程\GetSeason\GetSeason\obj\Debug\GetSeason.exe
 E:\迅雷下载\Git版本库\例程\GetSeason\GetSeason\obj\Debug\GetSeason.pdb
+=======
+>>>>>>> c5f22f94f6b8af116ded4f2f6ef164d8bcfa80ea
