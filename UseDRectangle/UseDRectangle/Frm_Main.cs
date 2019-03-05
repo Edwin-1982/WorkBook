@@ -19,9 +19,9 @@ namespace UseDRectangle
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Graphics graphics = this.CreateGraphics();
-            Pen myPen = new Pen(Color.Blue, 8);
-            graphics.DrawRectangle(myPen, 60, 50, 150, 100);
+            Graphics graphics = this.CreateGraphics();             //声明一个Graphics对象
+            Pen myPen = new Pen(Color.Blue, 8);                    //创建Pen对象
+            graphics.DrawRectangle(myPen, 60, 50, 150, 100);       //调用Graphics对象的DrawRectamgle方法
         }
     }
 }
