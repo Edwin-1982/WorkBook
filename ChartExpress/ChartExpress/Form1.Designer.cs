@@ -81,7 +81,6 @@
             title2.Name = "Title1";
             title2.Text = "Revenue Chart";
             this.chartRevenue.Titles.Add(title2);
-            this.chartRevenue.Click += new System.EventHandler(this.chartRevenue_Click);
             // 
             // btnload
             // 

@@ -31,14 +31,33 @@ namespace ChartExpress
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            chartSalary.Series["Salary"].Points.AddXY("Peter", 1000);
-            chartSalary.Series["Salary"].Points.AddXY("John", 5000);
-            chartSalary.Series["Salary"].Points.AddXY("Tan", 1500);
-            chartSalary.Series["Salary"].Points.AddXY("Luck", 7000);
-        }
-
-        private void chartRevenue_Click(object sender, EventArgs e)
-        {
+            //chartSalary.Series["Salary"].Points.AddXY("Peter", 1000);
+            //chartSalary.Series["Salary"].Points.AddXY("John", 5000);
+            //chartSalary.Series["Salary"].Points.AddXY("Tan", 1500);
+            //chartSalary.Series["Salary"].Points.AddXY("Luck", 7000);
+            chartSalary.Series["Salary"].Points.Add(1000);
+            chartSalary.Series["Salary"].Points[0].Color=Color.Red;
+            chartSalary.Series["Salary"].Points[0].AxisLabel="Peter";
+            chartSalary.Series["Salary"].Points[0].LegendText = "Peter";
+            chartSalary.Series["Salary"].Points[0].Label = "1000";
+            //
+            chartSalary.Series["Salary"].Points.Add(5000);
+            chartSalary.Series["Salary"].Points[1].Color = Color.Green;
+            chartSalary.Series["Salary"].Points[1].AxisLabel = "John";
+            chartSalary.Series["Salary"].Points[1].LegendText = "John";
+            chartSalary.Series["Salary"].Points[1].Label = "5000";
+            //
+            chartSalary.Series["Salary"].Points.Add(1500);
+            chartSalary.Series["Salary"].Points[2].Color = Color.Yellow;
+            chartSalary.Series["Salary"].Points[2].AxisLabel = "Tan";
+            chartSalary.Series["Salary"].Points[2].LegendText = "Tan";
+            chartSalary.Series["Salary"].Points[2].Label = "1500";
+            //
+            chartSalary.Series["Salary"].Points.Add(7000);
+            chartSalary.Series["Salary"].Points[3].Color = Color.Blue;
+            chartSalary.Series["Salary"].Points[3].AxisLabel = "Luck";
+            chartSalary.Series["Salary"].Points[3].LegendText = "Luck";
+            chartSalary.Series["Salary"].Points[3].Label = "7000";
 
         }
     }
