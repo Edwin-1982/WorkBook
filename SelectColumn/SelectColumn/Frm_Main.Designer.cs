@@ -35,12 +35,11 @@
             this.性别DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.年龄DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.家庭住址DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.newDataSet1 = new SelectColumn.NewDataSet1();
             this.sheet1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.sheet1_TableAdapter1 = new SelectColumn.NewDataSet1TableAdapters.Sheet1_TableAdapter();
+            this.newDataSet1 = new SelectColumn.NewDataSet1();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Message)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.newDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sheet1BindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv_Message
@@ -90,19 +89,15 @@
             this.家庭住址DataGridViewTextBoxColumn.HeaderText = "家庭住址";
             this.家庭住址DataGridViewTextBoxColumn.Name = "家庭住址DataGridViewTextBoxColumn";
             // 
-            // newDataSet1
-            // 
-            this.newDataSet1.DataSetName = "NewDataSet1";
-            this.newDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // sheet1BindingSource1
             // 
             this.sheet1BindingSource1.DataMember = "Sheet1$";
             this.sheet1BindingSource1.DataSource = this.newDataSet1;
             // 
-            // sheet1_TableAdapter1
+            // newDataSet1
             // 
-            this.sheet1_TableAdapter1.ClearBeforeFill = true;
+            this.newDataSet1.DataSetName = "NewDataSet1";
+            this.newDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Frm_Main
             // 
@@ -114,8 +109,8 @@
             this.Text = "查询特定列数据";
             this.Load += new System.EventHandler(this.Frm_Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Message)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.newDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sheet1BindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -130,7 +125,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 家庭住址DataGridViewTextBoxColumn;
         private NewDataSet1 newDataSet1;
         private System.Windows.Forms.BindingSource sheet1BindingSource1;
-        private NewDataSet1TableAdapters.Sheet1_TableAdapter sheet1_TableAdapter1;
     }
 }
 

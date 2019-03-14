@@ -782,7 +782,7 @@ namespace SelectColumn.NewDataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Sheet1_TableAdapter : global::System.ComponentModel.Component {
+    public partial class TableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -796,7 +796,7 @@ namespace SelectColumn.NewDataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public Sheet1_TableAdapter() {
+        public TableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1046,7 +1046,7 @@ namespace SelectColumn.NewDataSet1TableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private Sheet1_TableAdapter _sheet1_TableAdapter;
+        private TableAdapter _tableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1068,12 +1068,12 @@ namespace SelectColumn.NewDataSet1TableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public Sheet1_TableAdapter Sheet1_TableAdapter {
+        public TableAdapter TableAdapter {
             get {
-                return this._sheet1_TableAdapter;
+                return this._tableAdapter;
             }
             set {
-                this._sheet1_TableAdapter = value;
+                this._tableAdapter = value;
             }
         }
         
@@ -1096,9 +1096,9 @@ namespace SelectColumn.NewDataSet1TableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._sheet1_TableAdapter != null) 
-                            && (this._sheet1_TableAdapter.Connection != null))) {
-                    return this._sheet1_TableAdapter.Connection;
+                if (((this._tableAdapter != null) 
+                            && (this._tableAdapter.Connection != null))) {
+                    return this._tableAdapter.Connection;
                 }
                 return null;
             }
@@ -1113,7 +1113,7 @@ namespace SelectColumn.NewDataSet1TableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._sheet1_TableAdapter != null)) {
+                if ((this._tableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1127,12 +1127,12 @@ namespace SelectColumn.NewDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateUpdatedRows(NewDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._sheet1_TableAdapter != null)) {
+            if ((this._tableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet._Sheet1_.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._sheet1_TableAdapter.Update(updatedRows));
+                    result = (result + this._tableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1146,11 +1146,11 @@ namespace SelectColumn.NewDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateInsertedRows(NewDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._sheet1_TableAdapter != null)) {
+            if ((this._tableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet._Sheet1_.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._sheet1_TableAdapter.Update(addedRows));
+                    result = (result + this._tableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1164,11 +1164,11 @@ namespace SelectColumn.NewDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(NewDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._sheet1_TableAdapter != null)) {
+            if ((this._tableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet._Sheet1_.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._sheet1_TableAdapter.Update(deletedRows));
+                    result = (result + this._tableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1211,8 +1211,8 @@ namespace SelectColumn.NewDataSet1TableAdapters {
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._sheet1_TableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._sheet1_TableAdapter.Connection) == false))) {
+            if (((this._tableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("由 TableAdapterManager 管理的所有 TableAdapter 必须使用相同的连接字符串。");
             }
             global::System.Data.IDbConnection workConnection = this.Connection;
@@ -1246,13 +1246,13 @@ namespace SelectColumn.NewDataSet1TableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._sheet1_TableAdapter != null)) {
-                    revertConnections.Add(this._sheet1_TableAdapter, this._sheet1_TableAdapter.Connection);
-                    this._sheet1_TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._sheet1_TableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._sheet1_TableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._sheet1_TableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._sheet1_TableAdapter.Adapter);
+                if ((this._tableAdapter != null)) {
+                    revertConnections.Add(this._tableAdapter, this._tableAdapter.Connection);
+                    this._tableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._tableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._tableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1313,9 +1313,9 @@ namespace SelectColumn.NewDataSet1TableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._sheet1_TableAdapter != null)) {
-                    this._sheet1_TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._sheet1_TableAdapter]));
-                    this._sheet1_TableAdapter.Transaction = null;
+                if ((this._tableAdapter != null)) {
+                    this._tableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tableAdapter]));
+                    this._tableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
