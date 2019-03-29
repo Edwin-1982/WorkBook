@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UseFilePath
@@ -17,26 +13,27 @@ namespace UseFilePath
         {
             InitializeComponent();
         }
-        SqlConnection conn = new SqlConnection(//创建数据库连接字符串
-            @"server=dell;database=New;uid=sa;pwd=sa");
-        string strPath = "";//定义文件路径字段
-      
+        SqlConnection con = new SqlConnection(//定义数据库连接字段
+            @"server=dell;database=Record;uid=sa;pwd=sa");
+        string strPath ="";//定义文件路径字段
+
+
         private void Frm_Main_Load(object sender, EventArgs e)
         {
             string[] strSex = { "男", "女" };//创建字符串数组
             this.comboBox1.DataSource = strSex;//设置数据源
             string[] strCall =//创建字符串数组
-                {"助理工程师","工程师","中级工程师","高级工程师"};
+            {"员工","骨干","部门经理","经理"};
             this.comboBox2.DataSource = strCall;//设置数据源
             string[] strHunYin =//创建字符串数组
-                {"已婚","未婚","离异"};
+            {"已婚","未婚","离异"};
             this.comboBox3.DataSource = strHunYin;//设置数据源
             string[] strJianKang =//创建字符串数组
-                {"优秀","良好","一般"};
+            {"优秀","良好","一般"};
             this.comboBox4.DataSource = strJianKang;//设置数据源
 
         }
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void pictureBox1_DoubleClick(object sender, EventArgs e)
         {
             this.openFileImage.ShowDialog();//显示图片并得到路径
         }
@@ -90,39 +87,39 @@ namespace UseFilePath
         {
             try
             {
-                conn.Open();//打开数据库连接
+                con.Open();//打开数据库连接
                 StringBuilder strSql = new StringBuilder();//创建StringBuilder对象
                 strSql.Append("insert into 档案信息 values(@档案编号,@工号,");//追加文本内容
                 strSql.Append("@姓名,@照片,@性别,@出生日期,@籍贯,@工龄,@电话,");//追加文本内容
-                strSql.Append("@部门名称,@技术职称,@婚姻状况,@健康状态");//追加文本内容
-                SqlCommand cmd = new SqlCommand(strSql.ToString(), conn);//创建数据库对象
+                strSql.Append("@部门名称,@技术职称,@婚姻状况,@健康状况)");//追加文本内容
+                SqlCommand cmd = new SqlCommand(strSql.ToString(), con);//创建数据库对象
                 cmd.Parameters.Add("@档案编号", SqlDbType.Text).Value =//添加参数并赋值
                     this.textBox1.Text.Trim().ToString();
                 cmd.Parameters.Add("@工号", SqlDbType.Text).Value =//添加参数并赋值
                     this.textBox2.Text.Trim().ToString();
                 cmd.Parameters.Add("@姓名", SqlDbType.Text).Value =//添加参数并赋值
                     this.textBox3.Text.Trim().ToString();
-                cmd.Parameters.Add("@照片", SqlDbType.Text).Value =//添加参数并赋值
+                cmd.Parameters.Add("@照片", SqlDbType.Text).Value = strPath;//添加参数并赋值
                 cmd.Parameters.Add("@性别", SqlDbType.Text).Value =//添加参数并赋值
                     this.comboBox1.Text.Trim().ToString();
                 cmd.Parameters.Add("@出生日期", SqlDbType.Text).Value =//添加参数并赋值
                    this.textBox4.Text.Trim().ToString();
                 cmd.Parameters.Add("@籍贯", SqlDbType.Text).Value =//添加参数并赋值
-                    this.textBox4.Text.Trim().ToString();
-                cmd.Parameters.Add("@工龄", SqlDbType.Int).Value =//添加参数并赋值
-                    Convert.ToInt16(this.textBox5.Text.Trim().ToString());
-                cmd.Parameters.Add("@电话", SqlDbType.Text).Value =//添加参数并赋值
                     this.textBox5.Text.Trim().ToString();
+                cmd.Parameters.Add("@工龄", SqlDbType.Int).Value =//添加参数并赋值
+                    Convert.ToInt16(this.textBox6.Text.Trim().ToString());
+                cmd.Parameters.Add("@电话", SqlDbType.Text).Value =//添加参数并赋值
+                    this.textBox8.Text.Trim().ToString();
                 cmd.Parameters.Add("@部门名称", SqlDbType.Text).Value =//添加参数并赋值
-                    this.textBox6.Text.Trim().ToString();
+                    this.textBox7.Text.Trim().ToString();
                 cmd.Parameters.Add("@技术职称", SqlDbType.Text).Value =//添加参数并赋值
                     this.comboBox2.Text.Trim().ToString();
-                cmd.Parameters.Add("@婚姻状态", SqlDbType.Text).Value =//添加参数并赋值
+                cmd.Parameters.Add("@婚姻状况", SqlDbType.Text).Value =//添加参数并赋值
                     this.comboBox3.Text.Trim().ToString();
-                cmd.Parameters.Add("@健康状态", SqlDbType.Text).Value =//添加参数并赋值
+                cmd.Parameters.Add("@健康状况", SqlDbType.Text).Value =//添加参数并赋值
                     this.comboBox4.Text.Trim().ToString();
                 cmd.ExecuteNonQuery();//执行SQL语句
-                conn.Close();//关闭数据库连接
+                con.Close();//关闭数据库连接
                 return true;//方法返回布尔值
             }
             catch (Exception ex)
@@ -143,8 +140,8 @@ namespace UseFilePath
         private string 电话;
         private string 部门名称;
         private string 技术职称;
-        private string 婚姻状态;
-        private string 健康状态;
+        private string 婚姻状况;
+        private string 健康状况;
 
         private string ID
         {
@@ -203,13 +200,13 @@ namespace UseFilePath
         }
         private string marriage
         {
-            get { return 婚姻状态; }
-            set { 婚姻状态 = value; }
+            get { return 婚姻状况; }
+            set { 婚姻状况 = value; }
         }
         private string health
         {
-            get { return 健康状态; }
-            set { 健康状态 = value; }
+            get { return 健康状况; }
+            set { 健康状况 = value; }
         }
         #endregion
 

@@ -34,9 +34,9 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -105,12 +105,12 @@
             this.textBox6.Size = new System.Drawing.Size(100, 21);
             this.textBox6.TabIndex = 6;
             // 
-            // textBox7
+            // textBox8
             // 
-            this.textBox7.Location = new System.Drawing.Point(43, 172);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(121, 21);
-            this.textBox7.TabIndex = 7;
+            this.textBox8.Location = new System.Drawing.Point(43, 172);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(121, 21);
+            this.textBox8.TabIndex = 7;
             // 
             // comboBox1
             // 
@@ -120,12 +120,12 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 20);
             this.comboBox1.TabIndex = 8;
             // 
-            // textBox8
+            // textBox7
             // 
-            this.textBox8.Location = new System.Drawing.Point(243, 170);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(207, 21);
-            this.textBox8.TabIndex = 9;
+            this.textBox7.Location = new System.Drawing.Point(243, 170);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(207, 21);
+            this.textBox7.TabIndex = 9;
             // 
             // label1
             // 
@@ -318,11 +318,12 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_DoubleClick);
             // 
             // openFileImage
             // 
             this.openFileImage.FileName = "openFileImage";
+            this.openFileImage.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileImage_FileOk);
             // 
             // Frm_Main
             // 
@@ -348,9 +349,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
@@ -376,9 +377,9 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
