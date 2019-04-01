@@ -13,7 +13,7 @@ namespace UseFilePath
         {
             InitializeComponent();
         }
-        SqlConnection con = new SqlConnection(//定义数据库连接字段
+        SqlConnection conn = new SqlConnection(//定义数据库连接字段
             @"server=dell;database=Record;uid=sa;pwd=sa");
         string strPath ="";//定义文件路径字段
 
@@ -87,12 +87,12 @@ namespace UseFilePath
         {
             try
             {
-                con.Open();//打开数据库连接
+                conn.Open();//打开数据库连接
                 StringBuilder strSql = new StringBuilder();//创建StringBuilder对象
                 strSql.Append("insert into 档案信息 values(@档案编号,@工号,");//追加文本内容
                 strSql.Append("@姓名,@照片,@性别,@出生日期,@籍贯,@工龄,@电话,");//追加文本内容
                 strSql.Append("@部门名称,@技术职称,@婚姻状况,@健康状况)");//追加文本内容
-                SqlCommand cmd = new SqlCommand(strSql.ToString(), con);//创建数据库对象
+                SqlCommand cmd = new SqlCommand(strSql.ToString(), conn);//创建数据库对象
                 cmd.Parameters.Add("@档案编号", SqlDbType.Text).Value =//添加参数并赋值
                     this.textBox1.Text.Trim().ToString();
                 cmd.Parameters.Add("@工号", SqlDbType.Text).Value =//添加参数并赋值
@@ -119,7 +119,7 @@ namespace UseFilePath
                 cmd.Parameters.Add("@健康状况", SqlDbType.Text).Value =//添加参数并赋值
                     this.comboBox4.Text.Trim().ToString();
                 cmd.ExecuteNonQuery();//执行SQL语句
-                con.Close();//关闭数据库连接
+                conn.Close();//关闭数据库连接
                 return true;//方法返回布尔值
             }
             catch (Exception ex)
