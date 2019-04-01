@@ -52,6 +52,7 @@ namespace UseFilePath
             {
                 MessageBox.Show("请输入正确的信息");//弹出消息对话框
             }
+           
         }
         private void clearText()
         {
@@ -121,11 +122,14 @@ namespace UseFilePath
                 cmd.ExecuteNonQuery();//执行SQL语句
                 conn.Close();//关闭数据库连接
                 return true;//方法返回布尔值
+               
             }
+            
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "提示！");
                 return false;//方法返回布尔值
+                
             }
         }
         #region//访问器
