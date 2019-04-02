@@ -120,9 +120,8 @@ namespace UseFilePath
                 cmd.Parameters.Add("@健康状况", SqlDbType.Text).Value =//添加参数并赋值
                     this.comboBox4.Text.Trim().ToString();
                 cmd.ExecuteNonQuery();//执行SQL语句
-                conn.Close();//关闭数据库连接
+                conn.Close();
                 return true;//方法返回布尔值
-               
             }
             
             catch (Exception ex)
