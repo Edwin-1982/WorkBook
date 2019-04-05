@@ -136,7 +136,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 12);
             this.label4.TabIndex = 3;
-            this.label4.Text = "工作评价";
+            this.label4.Text = "高数分数";
             // 
             // label3
             // 
@@ -145,7 +145,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 12);
             this.label3.TabIndex = 2;
-            this.label3.Text = "基本工资";
+            this.label3.Text = "英语分数";
             // 
             // label2
             // 
@@ -154,7 +154,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 1;
-            this.label2.Text = "员工姓名";
+            this.label2.Text = "学生姓名";
             // 
             // label1
             // 
@@ -163,7 +163,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 12);
             this.label1.TabIndex = 0;
-            this.label1.Text = "员工编号";
+            this.label1.Text = "学生编号";
             // 
             // lv_Employee
             // 
