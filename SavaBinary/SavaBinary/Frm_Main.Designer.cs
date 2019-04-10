@@ -84,6 +84,10 @@
             this.dataGridView1.Size = new System.Drawing.Size(187, 144);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+<<<<<<< HEAD:SavaBinary/SavaBinary/Frm_Main.Designer.cs
+=======
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+>>>>>>> 028326c200f71fad687a718cc0f94fceacb2a7c1:SavaBinary/SavaBinary/Frm_Main.Designer.cs
             // 
             // button1
             // 
