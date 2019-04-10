@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2B9E366D-DDCA-418B-80CC-E8F1DEF6B89D}</ProjectGuid>
+    <ProjectGuid>{A8C9ADF6-2B9E-4B36-9C6E-AC1FD9C9F530}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SavaBinary</RootNamespace>
