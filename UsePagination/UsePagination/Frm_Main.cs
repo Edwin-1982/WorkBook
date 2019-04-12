@@ -18,14 +18,14 @@ namespace UsePagination
             InitializeComponent();
         }
         public static int INum = 0, AllCount = 0;//定义静态字段
-        int Sizes = 4;//每页记录数量
+        int Sizes = 8;//每页记录数量
         private void Frm_Main_Load(object sender, EventArgs e)
         {
             using (SqlConnection con = new SqlConnection(//创建数据库连接对象
                 @"SERVER=dell;database=New;uid=sa;pwd=sa"))
             {
                 SqlDataAdapter da = new SqlDataAdapter(//创建数据库适配器对象
-                    "SELECT * FROM Sheet1$", con);
+                    "SELECT * FROM Sheet1$_Copy", con);
                 DataTable dt = new DataTable();//创建数据对象
                 da.Fill(dt);//填充数据表
                 int i = dt.Rows.Count;//得到记录数量
@@ -40,7 +40,7 @@ namespace UsePagination
                     m = i / Sizes + 1;//计算记录页数
                 }
                 this.label2.Text = m.ToString();//显示记录页数
-                show(0, 4);//显示数据记录
+                show(0, 8);//显示数据记录
                 this.label5.Text = "1";//显示当前页数
             }
         }
@@ -57,7 +57,7 @@ namespace UsePagination
             SqlConnection con = new SqlConnection(//创建数据库连接对象
                 @"SERVER=dell;database=New;uid=sa;pwd=sa");
             SqlDataAdapter daone = new SqlDataAdapter(//创建数据适配器对象
-                "SELECT * from Sheet1$", con);
+                "SELECT * from Sheet1$_Copy", con);
             DataSet dsone = new DataSet();//创建数据集
             daone.Fill(dsone, i, j, "one");//填充数据集
             this.dataGridView1.DataSource =//设置数据源
@@ -70,7 +70,7 @@ namespace UsePagination
         {
             this.dataGridView1.DataSource = null;//设置数据源
             this.label5.Text = "1";//显示当前页数
-            show(0, Convert.ToInt32(this.label5.Text) * 4);//显示数据记录
+            show(0, Convert.ToInt32(this.label5.Text) * 8);//显示数据记录
         }
 
        
@@ -79,7 +79,7 @@ namespace UsePagination
         {
             this.label5.Text = this.label2.Text;//显示当前页数
             this.dataGridView1.DataSource = null;//设置数据源
-            show(Convert.ToInt32(this.label5.Text) * 4 - 4, AllCount - 1);//显示数据记录
+            show(Convert.ToInt32(this.label5.Text) * 8 - 8, AllCount - 1);//显示数据记录
         }
 
        
@@ -95,8 +95,8 @@ namespace UsePagination
             {
                 this.label5.Text = m.ToString();//显示当前页数
             }
-            int a = Convert.ToInt32(this.label5.Text) * 4 - 4;//得到记录数索引
-            show(a, 4);//显示数据记录
+            int a = Convert.ToInt32(this.label5.Text) * 8 - 8;//得到记录数索引
+            show(a, 8);//显示数据记录
         }
         private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -110,8 +110,8 @@ namespace UsePagination
             {
                 this.label5.Text = m.ToString();//显示当前页数
             }
-            int a = Convert.ToInt32(this.label5.Text) * 4 - 4;//得到记录数索引
-            show(a, 4);//显示数据记录
+            int a = Convert.ToInt32(this.label5.Text) * 8 - 8;//得到记录数索引
+            show(a, 8);//显示数据记录
         }
 
 
