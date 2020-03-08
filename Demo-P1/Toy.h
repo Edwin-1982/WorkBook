@@ -11,7 +11,7 @@ public:
 	~Toy();
 
 	string getName()const;
-	int getPrice()const;
+	float getPrice()const;
 	string getOrigin()const;
 	void setDiscount(float discount);
 private:

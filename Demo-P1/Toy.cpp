@@ -19,7 +19,7 @@ string Toy::getName() const{
 	return name;
 }
 
-int Toy::getPrice() const{
+float Toy::getPrice() const{
 	return price * discount;
 }
 

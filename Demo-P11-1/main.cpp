@@ -5,7 +5,6 @@
 #include<iostream>
 #include"Father.h"
 #include"Son.h"
-#include "main.h"
 
 int main(void) {
 	Father wjl("王健林", 68);
@@ -18,6 +17,9 @@ int main(void) {
 	// 如果还是找不到, 就是发生错误!
 
 	cout <<wsc.description() << endl;
+
+	cout << sizeof(wjl) << endl;
+	cout << sizeof(wsc) << endl;
 
 	system("pause");
 	return 0;
