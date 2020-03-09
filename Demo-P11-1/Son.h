@@ -1,7 +1,7 @@
 #pragma once
 #include "Father.h"
 
-class Son : public Father{
+class Son : protected Father{
 public:
 	Son(const char* name, int age, const char* game);
 
@@ -13,4 +13,5 @@ public:
 private:
 	string game;
 };
+
 

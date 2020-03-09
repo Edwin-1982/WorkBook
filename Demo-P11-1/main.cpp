@@ -9,7 +9,6 @@
 int main(void) {
 	Father wjl("王健林", 68);
 	Son wsc("王思聪", 32,"电竞");
-
 	cout << wjl.description() << endl;
 
 	// 子类对象调用方法时, 先在自己定义的方法中去寻找, 如果有, 就调用自己定义的方法

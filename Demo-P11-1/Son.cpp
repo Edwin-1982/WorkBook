@@ -26,7 +26,7 @@ string Son::description(){
 
 	// 子类的成员函数中, 不能访问从父类继承的private成员
 
-	ret << "姓名:" << getName() << " 年龄:" << getAge()
+	ret << "姓名:" << name << " 年龄:" << age
 		<< " 游戏:" << game;
 	return ret.str();
 }
