@@ -9,10 +9,7 @@ Father::Father(const char* name, int age){
 	this->age = age;
 }
 
-Father::~Father(){
-}
-
-string Father::getName(){
+string Father::getName() {
 	return name;
 }
 
