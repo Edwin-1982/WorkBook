@@ -6,21 +6,28 @@
 #define SALARY_FACTOR 0.006
 
 Boy::Boy(){
-	age = 0;
-	name = "";
-	salary = 0;
 }
 
-Boy::Boy(int age, string name, int salary){
+Boy::Boy(const Boy&other):Single(other.getName(),other.getAge()){
+	/*
+	age = other.age;
+	name = otjer.name;
+	*/
+	salary = other.salary;
+}
+
+Boy::Boy(int age, string name, int salary):Single(name,age){
+	/*
 	this->age = age;
 	this->name = name;
+	*/
 	this->salary = salary;
 }
 
-Boy::~Boy()
-{
+Boy::~Boy(){
 }
 
+/*
 int Boy::getAge() const
 {
 	return age;
@@ -29,21 +36,21 @@ int Boy::getAge() const
 string Boy::getName() const{
 	return name;
 }
+*/
 
-int Boy::getSalary() const
-{
+int Boy::getSalary() const{
 	return salary;
 }
 
 string Boy::description()const{
 	stringstream ret;
-	ret << name << "-男-薪资(" << salary << ")-年龄(" << age << ")";
+	ret << getName() << "-男-薪资(" << salary << ")-年龄(" << getAge() << ")";
 	
 	return ret.str();
 }
 
 bool Boy::satisfied(const Girl& girl) const{
-	int yanZhi = salary * SALARY_FACTOR;
+	double yanZhi = salary * SALARY_FACTOR;
 	if (yanZhi > 100) {
 		yanZhi = 100;
 	}
@@ -56,6 +63,7 @@ bool Boy::satisfied(const Girl& girl) const{
 }
 
 void Boy::inputBoys(vector<Boy>& boys){
+	
 	int age;
 	string name;
 	int salary;

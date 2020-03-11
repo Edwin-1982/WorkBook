@@ -24,12 +24,18 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Single.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Girl.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Boy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Single.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,24 +1,30 @@
-#include "Girl.h"
-#include "Boy.h"
 #include<sstream>  
 #include <iostream>
+#include "Girl.h"
+#include "Boy.h"
+#include"Single.h"
 
 //颜值系数
 #define YANZHI_FACTOR 100  
 
 Girl::Girl() {
+	/*
 	age = 0;
 	name = "";
 	yanZhi = 0;
+	*/
 }
-Girl::Girl(int age, string name, int yanZhi) {
+Girl::Girl(int age, string name, int yanZhi):Single(name,age) {
+	/*
 	this->age = age;
 	this->name = name;
+	*/
 	this->yanZhi = yanZhi;
 }
 Girl::~Girl() {
 
 }
+/*
 int Girl::getAge() const {
 
 	return age;
@@ -28,7 +34,7 @@ string Girl::getName() const {
 
 	return name;
 }
-
+*/
 int Girl::getYanzhi() const {
 
 	return yanZhi;
@@ -46,7 +52,7 @@ bool Girl::satisfied(const Boy& boy) const {
 
 string Girl::description() const {
 	stringstream ret;
-	ret << name<<"-女-颜值("<<yanZhi<<")-年龄("<<age<<")";
+	ret << getName()<<"-女-颜值("<<yanZhi<<")-年龄("<<getAge()<<")";
 	return ret.str();
 }
 
