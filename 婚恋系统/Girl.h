@@ -9,7 +9,6 @@ class Girl:public Single{
 public:
 	Girl();
 	Girl(int age, string name, int yanZhi);
-	Girl(int yanZhi);
 	~Girl();
 
 	/*
