@@ -8,6 +8,11 @@
 #define YANZHI_FACTOR 100  
 
 Girl::Girl() {
+	/*
+	int age = 0;
+	string name = "";
+	*/
+	double yanZhi = 0.0;
 }
 Girl::Girl(int age, string name, int yanZhi):Single(name,age) {
 	/*

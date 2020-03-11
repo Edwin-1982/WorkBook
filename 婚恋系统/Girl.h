@@ -26,6 +26,6 @@ private:
 	int age;
 	string name;
 	*/
-	int yanZhi;  //бежЕ
+	double yanZhi;  //бежЕ
 };
 
