@@ -7,7 +7,7 @@ public:
 
 	float getDiscount();
 	void setDiscount(float discount);
-	float getPrice();  //重写自己的getPrice
+	double getPrice();  //重写自己的getPrice
 private:
 	float discount;//折扣
 };

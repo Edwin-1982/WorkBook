@@ -16,7 +16,7 @@ void SellBook::setDiscount(float discount){
 	this->discount=discount;
 }
 
-float SellBook::getPrice(){
-	float ret = price * discount / 10.0;
+double SellBook::getPrice(){
+	double ret = (double)price * discount / 10.0;
 	return ret;
 }
