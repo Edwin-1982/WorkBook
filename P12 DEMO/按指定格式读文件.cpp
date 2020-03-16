@@ -1,7 +1,6 @@
 #include<iostream>
 #include<string>
 #include<fstream>
-#include<sstream>
 #include<Windows.h>
 
 
@@ -14,7 +13,11 @@ int main(void) {
 	int age;
 
 	infile.open("uscr.txt");
-
+	if (!infile.is_open()) {
+		cout << "文件打开失败!" << endl;
+		system("pause");
+		return 1;
+	}
 	while (1) {
 		getline(infile,line);
 		if (infile.eof()) {
