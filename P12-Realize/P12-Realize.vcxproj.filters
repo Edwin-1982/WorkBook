@@ -15,8 +15,34 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="按指定格式读文件.cpp">
+    <ClCompile Include="Single.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Boy.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Girl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Database.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Single.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Boy.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Girl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Database.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
