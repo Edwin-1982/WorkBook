@@ -41,3 +41,44 @@ Boy& Boy::operator=(const Boy& boy){
 	return *this;
 }
 
+bool Boy::operator>(const Boy& boy){
+	
+	//设置比较规则
+	//薪资*黑马系数+(100-年龄)*1000
+	if (power() > boy.power()) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
+bool Boy::operator<(const Boy& boy){
+	
+	//设置比较规则
+	//薪资*黑马系数+(100-年龄)*1000
+	if (power() < boy.power()) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+bool Boy::operator==(const Boy& boy) {
+
+	//设置比较规则
+	//薪资*黑马系数+(100-年龄)*1000
+	if (power() == boy.power()) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
+int Boy::power() const{
+	//薪资*黑马系数+(100-年龄)*1000
+	int ret = salary * darkHorse + (100 - age) * 1000;
+	return ret;
+}
+

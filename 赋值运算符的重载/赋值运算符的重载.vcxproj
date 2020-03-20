@@ -139,12 +139,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Boy.cpp" />
-    <ClCompile Include="Girl.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Boy.h" />
-    <ClInclude Include="Girl.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
