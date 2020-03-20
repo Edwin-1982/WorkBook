@@ -1,10 +1,23 @@
+#include<sstream>
 #include "Cow.h"
-#include"Horse.h"
-#include"Pork.h"
+//#include"Horse.h"
+//#include"Pork.h"
+
 
 Cow::Cow(int weight){
 	this->weight = weight;
 }
+Cow Cow::operator+(int n){
+	int tmp=weight + n;
+	return Cow(tmp);
+}
+
+string Cow::description(){
+	stringstream ret;
+	ret << "Ò»Í·Å£" << weight << "½ïµÄÅ£Èâ" << endl;
+	return ret.str();
+}
+
 /*
 1½ïÅ£Èâ:2½ïÖíÈâ
 1½ïÂíÈâ:3½ïÖíÈâ
