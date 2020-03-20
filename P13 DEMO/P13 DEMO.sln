@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "运算符重载", "..\运�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "使用友元函数实现运算符重载", "..\使用友元函数实现运算符重载\使用友元函数实现运算符重载.vcxproj", "{C5CBA3AB-6612-46F0-9899-8EF63352F42E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "赋值运算符的重载", "..\赋值运算符的重载\赋值运算符的重载.vcxproj", "{AA40F755-FD11-4084-8DA9-57D38C61214B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{C5CBA3AB-6612-46F0-9899-8EF63352F42E}.Release|x64.Build.0 = Release|x64
 		{C5CBA3AB-6612-46F0-9899-8EF63352F42E}.Release|x86.ActiveCfg = Release|Win32
 		{C5CBA3AB-6612-46F0-9899-8EF63352F42E}.Release|x86.Build.0 = Release|Win32
+		{AA40F755-FD11-4084-8DA9-57D38C61214B}.Debug|x64.ActiveCfg = Debug|x64
+		{AA40F755-FD11-4084-8DA9-57D38C61214B}.Debug|x64.Build.0 = Debug|x64
+		{AA40F755-FD11-4084-8DA9-57D38C61214B}.Debug|x86.ActiveCfg = Debug|Win32
+		{AA40F755-FD11-4084-8DA9-57D38C61214B}.Debug|x86.Build.0 = Debug|Win32
+		{AA40F755-FD11-4084-8DA9-57D38C61214B}.Release|x64.ActiveCfg = Release|x64
+		{AA40F755-FD11-4084-8DA9-57D38C61214B}.Release|x64.Build.0 = Release|x64
+		{AA40F755-FD11-4084-8DA9-57D38C61214B}.Release|x86.ActiveCfg = Release|Win32
+		{AA40F755-FD11-4084-8DA9-57D38C61214B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
