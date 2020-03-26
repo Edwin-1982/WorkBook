@@ -88,6 +88,8 @@ int Boy::power() const{
 	int ret = salary * darkHorse + (100 - age) * 1000;
 	return ret;
 }
+
+//定义拷贝构造函数
 //Boy::Boy(const Boy& boy) {
 //	int len = strlen(boy.name) + 1;
 //	name = new char[len];
