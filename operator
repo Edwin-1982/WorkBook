@@ -1,0 +1,5 @@
+﻿  Boy.cpp
+E:\迅雷下载\Git版本库\例程\operator=Bug\Boy.cpp(40,32): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  main.cpp
+  正在生成代码...
+  operator=Bug.vcxproj -> E:\迅雷下载\Git版本库\例程\P13 DEMO\x64\Debug\operator=Bug.exe
